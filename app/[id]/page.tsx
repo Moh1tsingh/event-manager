@@ -16,7 +16,10 @@ import { Label } from "@/components/ui/label";
 import { addRsvp } from "../actions";
 import SubmitButton from "../components/SubmitButton";
 
+import { unstable_noStore as noStore } from "next/cache";
+
 async function page({ params }: { params: { id: string } }) {
+  noStore();
   const data = await prisma.event.findUnique({
     where: {
       id: params.id.toString(),
