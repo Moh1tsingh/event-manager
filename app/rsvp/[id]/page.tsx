@@ -25,6 +25,7 @@ async function RsvpPage({ params }: { params: { id: string } }) {
             <LogoutLink>Log out</LogoutLink>
           </button>
         </div>
+        {rsvpData.length === 0 && <div className=" w-full flex justify-center items-center text-2xl">No RSVPs yet!</div>}
         <div className=" px-20  flex justify-center items-center  py-4 flex-col gap-y-2 overflow-auto event-card-container ">
           {rsvpData.map((rsvp) => (
             <Card key={rsvp.id} className="flex flex-col w-full   p-3">
