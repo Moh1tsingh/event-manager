@@ -71,4 +71,3 @@ function CreateEventCard() {
 }
 
 export default CreateEventCard;
-
