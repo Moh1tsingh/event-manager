@@ -9,7 +9,9 @@ function CopyLinkButton({id}: {id: string}) {
       <Button
         variant={"default"}
         onClick={() =>
-          navigator.clipboard.writeText(`http://localhost:3000/${id}`)
+          navigator.clipboard.writeText(
+            `https://event-manager-liard-one.vercel.app/${id}`
+          )
         }
         className="w-10 p-0 hover:bg-gray-100 hover:text-gray-800 duration-200 ease-linear"
       >
