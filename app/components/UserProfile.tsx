@@ -2,7 +2,10 @@ import React from 'react'
 
 import { getUserData } from "../actions";
 import Image from 'next/image';
+import { unstable_noStore as noStore } from "next/cache";
+
 async function UserProfile() {
+  noStore();
     const user = await getUserData();
   return ( user &&
     <div className=' flex w-full justify-start py-5 gap-x-2 items-center pl-7'>

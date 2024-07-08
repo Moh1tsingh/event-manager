@@ -1,8 +1,10 @@
 "use client"
 import { getKindeServerSession, LoginLink, LogoutLink } from '@kinde-oss/kinde-auth-nextjs/server';
 import React, { useEffect } from 'react'
+import { unstable_noStore as noStore } from "next/cache";
 
 function AuthButton() {
+    noStore();
     let user = null;
     useEffect(()=>{
         const {getUser} = getKindeServerSession();

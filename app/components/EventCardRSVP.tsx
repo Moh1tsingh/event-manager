@@ -2,11 +2,11 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { getEvents } from "../actions";
-import { redirect } from "next/navigation";
-import { Button } from "react-day-picker";
 import Link from "next/link";
+import { unstable_noStore as noStore } from "next/cache";
 
 async function EventCardRSVP() {
+  noStore()
   const events = await getEvents();
   return (
     <div className=" w-1/2 p-4">

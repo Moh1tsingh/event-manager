@@ -7,13 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Grid2X2,
-  Grid2x2CheckIcon,
-  Grid2X2Icon,
-  MessageCircle,
-  Workflow,
-} from "lucide-react";
 import React from "react";
 import { BsBoxSeamFill } from "react-icons/bs";
 

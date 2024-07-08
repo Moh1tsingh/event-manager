@@ -2,8 +2,10 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 import { getEvents } from "../actions";
 import CopyLinkButton from "./CopyLinkButton";
+import { unstable_noStore as noStore } from "next/cache";
 
 async function EventCard() {
+  noStore();
   const events = await getEvents();
   return (
     <div className=" w-full p-4 ">
