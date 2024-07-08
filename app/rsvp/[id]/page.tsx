@@ -5,8 +5,10 @@ import { Card } from "@/components/ui/card";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import React from "react";
 
+import { unstable_noStore as noStore } from "next/cache";
+
 async function RsvpPage({ params }: { params: { id: string } }) {
-  // console.log(params.id)
+  noStore();
   const rsvpData = await getRsvp(params.id);
   return (
     <div className=" w-full flex">

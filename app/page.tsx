@@ -1,20 +1,10 @@
 
 import {
-  RegisterLink,
   LoginLink,
-  LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
-import { useState } from "react";
 import CalendarCard from "./components/CalendarCard";
 import ManageEventsCard from "./components/ManageEventsCard";
 import DatePickerCard from "./components/DatePickerCard";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import AuthButton from "./components/AuthButton";
-{
-  /* 
-      <RegisterLink>Sign up</RegisterLink>
-       */
-}
 export default function Home() {
   return (
     <div className=" w-full flex flex-col items-center ">
